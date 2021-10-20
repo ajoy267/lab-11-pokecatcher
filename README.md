@@ -1,3 +1,60 @@
+# PokeCatcher App Day 1
+
+## Home Page
+
+### HTML
+* 3 Radio Buttons
+* Submit Button
+
+### App.js
+* make generate pokemon function
+    * generate 3 random Pokemon
+
+
+## Local Storage Functions
+
+
+## Results Page
+
+### HTML
+* empty page
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Alchemy Bootstrap Template
 
 ## Making a plan
