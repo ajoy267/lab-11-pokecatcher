@@ -3,22 +3,63 @@
 ## Home Page
 
 ### HTML
-* 3 Radio Buttons
+* 3 Radio Buttons - class = "pokemon-options"
+    * id - pokemon-select
+    * pokemonCard 
+        * id - number
+        * pokemon - name of pokemon
+        * image - url_image
+        * type - type of pokemon
 * Submit Button
+    * Let numGuess = 10, subtract 1 each time pressed
+        * numGuess--;
+    * call caughtPokemon
+    * if numGuess = 0, go to results page
+    * passes encounter
+        * ID encounter ++ into local storage
+        * ID picked ++ passes into local storage
 
 ### App.js
-* make generate pokemon function
+* make generatePokemon function
     * generate 3 random Pokemon
+    * while loop for repeated numbers
+    * call encounterPokemon 3x
+    * render pokemon on page
 
+### Local Storage
+* array of {
+    id: ?,
+    encountered: ?,
+    caught: ?
+} {
+    id: ?,
+    encountered: ?,
+    caught: ?
+} {
+    id: ?,
+    encountered: ?,
+    caught: ?
+}
 
-## Local Storage Functions
+### storage-utils.js (local storage functions) (similar to ecommerce page)
+* findByID
+* getResults (getProducts)
+* showPokemon(id) - encounter
+    * increment shown
+* caughtPokemon(id) - caught
+    * increment picked
+* getPokemon (getCart)
+* add button (pick pokemon, submit button)
 
+### pokemon.js
+* array of pokemon
 
 ## Results Page
 
 ### HTML
-* empty page
-
+* reset button
+    * set numGuess back to 10
+    * call generatePokemon
 
 
 
