@@ -5,3 +5,9 @@ export function findById(id, items) {
         }
     }
 }
+
+export function getPokedex() {
+    const pokedexString = localStorage.getItem('POKEDEX') || '[]';
+    const pokedex = JSON.parse(pokedexString);
+    return pokedex;
+}
