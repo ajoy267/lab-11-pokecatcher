@@ -11,3 +11,16 @@ export function getPokedex() {
     const pokedex = JSON.parse(pokedexString);
     return pokedex;
 }
+
+export function encounterPokemon(id) {
+    const pokedex = getPokedex();
+    const pokemonItem = findById(id, pokedex);
+    if (pokemonItem) {
+        pokemonItem.encountered++;
+    } else {
+        const newItem = { id: id, enocounter: 1, captured: 0 };
+        pokedex.push(newItem);
+    }
+    const pokedexString = JSON.stringify(pokedex);
+    localStorage.setItem('POKEDEX', pokedexString);
+}

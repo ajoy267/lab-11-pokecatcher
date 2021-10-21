@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import pokemon from '../data/pokemon.js';
-import { findById, getPokedex } from '../storage-utils.js';
+import { findById, getPokedex, encounterPokemon } from '../storage-utils.js';
 // import { example } from '../example.js';
 
 const test = QUnit.test;
@@ -58,4 +58,21 @@ test('getPokedex should return the Pokedex from local storage', (expect) => {
     localStorage.setItem('POKEDEX', JSON.stringify(expected));
     const actual = getPokedex();
     expect.deepEqual(actual, expected);
+});
+
+test('encounterPokemon should increment the quantity of a pokemon based on their id', (expect) => {
+    localStorage.removeItem('POKEDEX');
+    const expected = [
+        { 'id': 1, encountered: 1, captured: 0 },
+        { 'id': 2, encountered: 1, captured: 0 }
+    ];
+    localStorage.setItem('POKEDEX', JSON.stringify(expected));
+    
+    encounterPokemon(1);
+    const pokedex = getPokedex();
+    const actual = [
+        { 'id': 1, encountered: 2, captured: 0 },
+        { 'id': 2, encountered: 1, captured: 0 }
+    ];
+    expect.deepEqual(pokedex, actual);
 });
