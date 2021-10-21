@@ -33,6 +33,13 @@ export const generatePokemon = () => {
 
 generatePokemon();
 
+let totalPlays = 0;
+
 button.addEventListener('click', ()=>{
-    generatePokemon();
+    totalPlays++;
+    if (totalPlays <= 10) {
+        generatePokemon();
+    } else {
+        window.location.href = './results/';
+    }
 });
