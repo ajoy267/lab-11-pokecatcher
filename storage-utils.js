@@ -24,3 +24,12 @@ export function encounterPokemon(id) {
     const pokedexString = JSON.stringify(pokedex);
     localStorage.setItem('POKEDEX', pokedexString);
 }
+
+export function capturedPokemon(id) {
+    const pokedex = getPokedex();
+    const pokemonItem = findById(id, pokedex);
+    pokemonItem.captured++;
+
+    const pokedexString = JSON.stringify(pokedex);
+    localStorage.setItem('POKEDEX', pokedexString);
+}
