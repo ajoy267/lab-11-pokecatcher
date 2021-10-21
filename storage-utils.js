@@ -18,7 +18,7 @@ export function encounterPokemon(id) {
     if (pokemonItem) {
         pokemonItem.encountered++;
     } else {
-        const newItem = { id: id, enocounter: 1, captured: 0 };
+        const newItem = { id: id, encountered: 1, captured: 0 };
         pokedex.push(newItem);
     }
     const pokedexString = JSON.stringify(pokedex);
