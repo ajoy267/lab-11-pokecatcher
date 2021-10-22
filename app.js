@@ -44,7 +44,6 @@ export const generatePokemon = () => {
 generatePokemon();
 
 let totalPlays = 0;
-encounterPokemon();
 
 button.addEventListener('click', ()=>{
     const pickedPokemon = document.querySelector('input[type=radio]:checked');
