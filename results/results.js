@@ -99,9 +99,6 @@ new Chart(ctx, {
             ],
             borderWidth: 1
         }],
-        
-        label: '# of Times Encountered',
-        data: encountered,
     },
     options: {
         scales: {
