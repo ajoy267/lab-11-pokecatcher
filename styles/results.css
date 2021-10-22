@@ -1,0 +1,52 @@
+* {
+    font-family: 'Rampart One', cursive;
+    background-color: darkgrey;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: red;
+}
+
+main h1 {
+    display: flex;
+    justify-content: center;
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.results-container {
+    color: red; 
+}
+
+.results-body {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    height: 150px;
+    width: 150px
+}
+
+.results-body img {
+    display: flex;
+    width: 100px;
+    height: 100px;
+}
+
+.chart {
+    margin-bottom: 50px;
+}
+
+button {
+    width: 150px;
+    margin: 20px auto;
+}
